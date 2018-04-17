@@ -32,7 +32,7 @@ class App extends Component {
               <Bar dataKey="hours" fill="#ff7300" yAxisId={0} />
               <Bar dataKey="money" fill="#387908" yAxisId={1} />
             </BarChart>
-            <CalendarHeatmap classForValue={this.heatmapClassForValue} startDate={this.state.dayGraph.startDate} endDate={this.state.dayGraph.endDate} values={this.state.dayGraph.days} />
+            <CalendarHeatmap classForValue={this.heatmapClassForValue} titleForValue={this.heatmapTitleForValue} startDate={this.state.dayGraph.startDate} endDate={this.state.dayGraph.endDate} values={this.state.dayGraph.days} />
           </div>
         }
       </div>
@@ -90,7 +90,10 @@ class App extends Component {
     if (value.hours < 2) return `color-github-2`;
     if (value.hours < 3) return `color-github-3`;
     return `color-github-4`;
-
+  }
+  heatmapTitleForValue(value) {
+    if (!value) return "";
+    return new Date(value.date).toLocaleDateString() + ": " + value.hours + " hours";
   }
 }
 
