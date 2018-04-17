@@ -1,0 +1,15 @@
+.year {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.week {
+	width: 1.92307692%;
+	display: flex;
+	flex-direction: column;
+}
+.day {
+	width: 100%;
+	padding-top: 100%;
+	background-color: red;
+}
