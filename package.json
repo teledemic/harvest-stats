@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "csv": "^3.0.2",
+    "csv-parse": "^2.2.0",
     "react": "^16.3.1",
     "react-calendar-heatmap": "^1.6.3",
     "react-dom": "^16.3.1",
