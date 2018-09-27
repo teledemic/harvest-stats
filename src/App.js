@@ -57,8 +57,8 @@ class App extends Component {
 			startDate.setDate(startDate.getDate() - startDate.getDay());
 			const startDay = Math.floor(startDate.getTime() / 1000 / 60 / 60 / 24);
 			const endDay = Math.floor(endDate.getTime() / 1000 / 60 / 60 / 24);
-			let days = new Array(endDay - startDay);
-			for (let day = 0; day < endDay - startDay; day++) {
+			let days = new Array(endDay - startDay + 1);
+			for (let day = 0; day < endDay - startDay + 1; day++) {
 				days[day] = { date: (startDay + day) * 1000 * 60 * 60 * 24, hours: 0, money: 0 };
 			}
 
